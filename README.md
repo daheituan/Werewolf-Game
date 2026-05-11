@@ -11,7 +11,8 @@
 
 | 首页圆桌房间 | 游戏分类 | 身份查看 | 游戏结果 |
 |---|---|---|---|
-| ![首页圆桌房间](assets/home_ref.png) | ![游戏分类](assets/category_ref.png) | ![身份查看](assets/role_ref.png) | ![游戏结果](assets/result_ref.png) |
+| ![首页圆桌房间](<img width="941" height="1672" alt="桌面" src="https://github.com/user-attachments/assets/3604a3e9-0406-43a5-a1a5-9462fd96b55c" />
+) | ![游戏分类](assets/category_ref.png) | ![身份查看](assets/role_ref.png) | ![游戏结果](assets/result_ref.png) |
 
 ---
 
