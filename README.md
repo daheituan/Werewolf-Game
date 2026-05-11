@@ -11,8 +11,15 @@
 
 | 首页圆桌房间 | 游戏分类 | 身份查看 | 游戏结果 |
 |---|---|---|---|
-| ![首页圆桌房间](<img width="941" height="1672" alt="桌面" src="https://github.com/user-attachments/assets/3604a3e9-0406-43a5-a1a5-9462fd96b55c" />
-) | ![游戏分类](assets/category_ref.png) | ![身份查看](assets/role_ref.png) | ![游戏结果](assets/result_ref.png) |
+| <img width="941" height="1672" alt="桌面" src="https://github.com/user-attachments/assets/3604a3e9-0406-43a5-a1a5-9462fd96b55c" />
+
+| <img width="941" height="1672" alt="狼人杀游戏选择" src="https://github.com/user-attachments/assets/89f6fe72-ce1e-481a-abf6-9740bd92c884" />
+
+| <img width="941" height="1672" alt="身份" src="https://github.com/user-attachments/assets/814766b6-c3eb-4ee2-baee-f5488640bd39" />
+
+| <img width="941" height="1672" alt="投票界面" src="https://github.com/user-attachments/assets/1de45066-ab21-4a0d-8041-671d3ea3db30" />
+
+|
 
 ---
 
