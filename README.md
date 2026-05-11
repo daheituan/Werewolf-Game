@@ -7,10 +7,9 @@
 
 ---
 
-## 预览
+## 预览效果
 
-| 首页圆桌房间 | 游戏分类 | 身份查看 | 游戏结果 |
-|---|---|---|---|
+|
 | <img width="941" height="1672" alt="桌面" src="https://github.com/user-attachments/assets/3604a3e9-0406-43a5-a1a5-9462fd96b55c" />
 
 | <img width="941" height="1672" alt="狼人杀游戏选择" src="https://github.com/user-attachments/assets/89f6fe72-ce1e-481a-abf6-9740bd92c884" />
@@ -56,3 +55,4 @@
 - 更多玩法：持续更新
 
 ---
+正在学习vibe coding的小白，随意搞搞
