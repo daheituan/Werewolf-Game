@@ -1,0 +1,24 @@
+
+.game-hero{display:flex;align-items:center;padding:22rpx;margin-bottom:24rpx;color:#fff5df}
+.game-icon{width:118rpx;height:118rpx;border-radius:28rpx;background:linear-gradient(180deg,#9f3429,#6d2119);display:flex;align-items:center;justify-content:center;font-size:66rpx;border:4rpx solid #ffd28b;margin-right:22rpx}
+.hero-name{font-size:38rpx;font-weight:900}.hero-desc{font-size:26rpx;margin:8rpx 0;color:#ffe8c8}.online-tip{font-size:23rpx;color:#ffe092}
+.setup-panel{padding:26rpx}
+.setting-row{min-height:92rpx;border-bottom:2rpx dashed #ead1ad;display:flex;align-items:center;justify-content:space-between;gap:18rpx}
+.setting-row:last-child{border-bottom:0}.type-row{align-items:flex-start;padding:22rpx 0}
+.setting-label{font-size:29rpx;font-weight:900;color:#533018;display:flex;align-items:center;gap:14rpx;white-space:nowrap}
+.setting-icon{width:56rpx;height:56rpx;border-radius:50%;background:#9d6a3d;color:#fff;display:flex;align-items:center;justify-content:center;font-size:28rpx}
+.stepper{height:68rpx;border-radius:36rpx;background:#fff9ec;border:2rpx solid #ead0ab;display:flex;align-items:center;overflow:hidden}
+.stepper button{width:72rpx;height:68rpx;color:#875024;font-size:34rpx}.stepper text{min-width:76rpx;text-align:center;font-size:34rpx;font-weight:900}
+.auto-value{display:flex;align-items:center;gap:14rpx}.auto-value>text:first-child{font-size:34rpx;font-weight:900;color:#5f3517}.mini-badge{font-size:22rpx;color:#e07413;background:#fff0cc;border-radius:18rpx;padding:8rpx 14rpx}
+.hint-line{font-size:22rpx;color:#9d7a5c;margin:-8rpx 0 8rpx 74rpx}
+.small-orange{height:64rpx;border-radius:32rpx;background:linear-gradient(#ffd76b,#ffa42a);color:#6b320c;font-weight:900;padding:0 22rpx;font-size:24rpx;box-shadow:0 6rpx 0 #cf7819}
+.select-pill{background:#fff9ec;border-radius:32rpx;padding:16rpx 22rpx;border:2rpx solid #ecd4b0;color:#71411e;font-weight:800}
+.preview-box{background:#fff8ec;border-radius:28rpx;padding:22rpx;margin-top:22rpx;border:2rpx solid #f0d6b1}
+.preview-head{font-size:28rpx;font-weight:900;color:#6a3b1b;margin-bottom:14rpx;display:flex;justify-content:space-between}.preview-head button{color:#9a6337;font-size:24rpx}
+.scenario-row{display:flex;align-items:flex-start;gap:14rpx;margin:12rpx 0}.scenario-row view{flex:1;background:#fff;border-radius:20rpx;padding:16rpx;font-size:25rpx;color:#523015}
+.good,.bad{min-width:130rpx;text-align:center;border-radius:20rpx;padding:12rpx 14rpx;font-weight:900;font-size:24rpx}.good{background:#e0f5c8;color:#407b25}.bad{background:#ffe1df;color:#b3312a}
+.divider{height:2rpx;border-bottom:2rpx dashed #e4c8a4;margin:18rpx 0 8rpx}
+.notice{margin-top:22rpx;padding:18rpx 22rpx;background:linear-gradient(180deg,#ffe8b5,#ffd985);border-radius:24rpx;color:#784719;font-weight:700;font-size:25rpx}
+.button-row{display:flex;gap:20rpx;margin-top:28rpx}.button-row .flex{flex:1}.secondary-btn{width:240rpx}
+.team{padding:12rpx 18rpx;border-radius:24rpx;margin-left:8rpx;font-weight:900;font-size:24rpx}.red{background:#ffe0dd;color:#d94a3d}.blue{background:#ddeaff;color:#3569c9}
+.chip.active{background:#ffb02f;color:#6a2a08;font-weight:900;border-color:#ffd783}

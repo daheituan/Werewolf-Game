@@ -1,0 +1,17 @@
+<view class="safe bg-dots">
+  <view class="header"><button class="back" bindtap="back">‹</button><text class="title">{{title}}</text><view class="mock-menu">••• ◉</view></view>
+  <view class="seg"><text class="{{category==='werewolf'?'on':''}}" bindtap="switchCat" data-id="werewolf">🐺 狼人杀类</text><text class="{{category==='guess'?'on':''}}" bindtap="switchCat" data-id="guess">🎨 猜词类游戏</text></view>
+  <view class="grid">
+    <block wx:for="{{games}}" wx:key="id">
+      <view class="game-card {{selectedGameId===item.id?'selected':''}} {{item.disabled?'disabled':''}}" bindtap="choose" data-id="{{item.id}}">
+        <view class="game-ico">{{item.icon}}</view>
+        <view class="game-name">{{item.name}}</view>
+        <view class="game-desc">{{item.desc}}</view>
+        <view class="meta"><text>👥 {{item.people}}</text><text>👫 {{item.group}}</text><text>🎲 {{item.random}}</text></view>
+        <view wx:if="{{item.disabled}}" class="coming">Coming Soon</view>
+      </view>
+    </block>
+  </view>
+  <button class="btn-primary" bindtap="goSetup">进入设置 ›</button>
+  <view class="bottom-tip">💡 点击卡片可查看详细规则与示例</view>
+</view>

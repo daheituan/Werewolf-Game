@@ -1,0 +1,21 @@
+.room-card { padding:22rpx; border-radius:34rpx; background:rgba(255,255,255,.14); color:#fff; backdrop-filter: blur(8rpx); }
+.game-icon { width:112rpx; height:112rpx; border-radius:24rpx; background:#9a2f25; display:flex; align-items:center; justify-content:center; font-size:64rpx; margin-right:20rpx; border:4rpx solid #ffd8a5; }
+.room-title { font-size:32rpx; font-weight:900; }
+.count-pill { background:rgba(255,255,255,.18); border-radius:46rpx; padding:18rpx 24rpx; font-size:28rpx; }
+.count-pill text { color:#ffd75f; font-weight:900; font-size:38rpx; }
+.table-wrap { height:920rpx; display:flex; align-items:center; justify-content:center; }
+.round-table { position:relative; width:650rpx; height:650rpx; border-radius:50%; background:radial-gradient(circle,#d88a38 0%,#b76a2c 62%,#74411f 100%); box-shadow:0 26rpx 36rpx rgba(0,0,0,.35), inset 0 0 0 16rpx rgba(120,58,18,.25); display:flex; align-items:center; justify-content:center; flex-direction:column; }
+.start-btn { width:300rpx; height:106rpx; border-radius:60rpx; background:linear-gradient(#ffe06b,#ff9a20); color:#6a2a08; font-size:42rpx; font-weight:900; box-shadow:0 10rpx 0 #ad5914, inset 0 8rpx 0 rgba(255,255,255,.45); }
+.table-sub { color:#fff4de; margin-top:20rpx; font-size:24rpx; }
+.seat { position:absolute; display:flex; flex-direction:column; align-items:center; width:170rpx; }
+.seat-0 { top:-78rpx; left:240rpx; } .seat-1 { top:54rpx; right:-58rpx; } .seat-2 { top:286rpx; right:-88rpx; } .seat-3 { bottom:-52rpx; right:90rpx; } .seat-4 { bottom:-52rpx; left:90rpx; } .seat-5 { top:286rpx; left:-88rpx; } .seat-6 { top:54rpx; left:-58rpx; } .seat-7 { top:-70rpx; right:120rpx; }
+.avatar.active { border-color:#ffd438; box-shadow:0 0 0 8rpx rgba(255,212,56,.35), 0 6rpx 12rpx rgba(0,0,0,.25); }
+.name { margin-top:6rpx; padding:6rpx 12rpx; border-radius:18rpx; background:rgba(82,43,19,.82); color:#fff7e9; font-size:22rpx; white-space:nowrap; }
+.me-tag { position:absolute; top:-8rpx; left:18rpx; z-index:2; background:#ffd33d; color:#6a2a08; border-radius:20rpx; padding:2rpx 12rpx; font-weight:900; }
+.invite-seat { bottom:-16rpx; left:240rpx; }
+.plus { width:96rpx; height:96rpx; border-radius:50%; border:4rpx dashed rgba(255,255,255,.5); color:#fff3dd; background:rgba(90,54,33,.5); font-size:58rpx; }
+.tip-card { margin:0 auto 24rpx; width:620rpx; padding:18rpx 26rpx; border-radius:30rpx; background:rgba(255,255,255,.16); color:#fff4df; text-align:center; }
+.tabbar { position:fixed; left:32rpx; right:32rpx; bottom:24rpx; height:124rpx; border-radius:48rpx; background:#fffaf1; display:flex; align-items:center; justify-content:space-around; box-shadow:0 -8rpx 30rpx rgba(0,0,0,.22); }
+.tab { display:flex; flex-direction:column; align-items:center; font-size:38rpx; color:#928d8a; font-weight:800; }
+.tab text { font-size:22rpx; margin-top:6rpx; }
+.tab.active { color:#ff941b; } .tab.purple { color:#8c70ff; }

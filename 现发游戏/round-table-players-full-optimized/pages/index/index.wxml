@@ -1,0 +1,45 @@
+<view class="page safe bg-dots">
+  <view class="header">
+    <text class="logo">圆桌玩家</text>
+    <view class="mock-menu">••• ◉</view>
+  </view>
+
+  <view class="room-card row space-between">
+    <view class="row">
+      <view class="game-icon">🐺</view>
+      <view>
+        <view class="room-title">{{room.name}} 🔒</view>
+        <view class="muted">房间号：{{room.roomNo}}</view>
+        <view class="badge mt16">标准模式 · {{room.maxPlayers}}人局</view>
+      </view>
+    </view>
+    <view class="count-pill">👥 已加入 <text>{{room.players.length}}</text>/{{room.maxPlayers}}</view>
+  </view>
+
+  <view class="table-wrap">
+    <view class="round-table">
+      <button class="start-btn" bindtap="startSelect">开始游戏</button>
+      <text class="table-sub">联机房间 · 各玩家在自己设备查看身份</text>
+      <block wx:for="{{seats}}" wx:key="id">
+        <view class="seat seat-{{index}}">
+          <view class="me-tag" wx:if="{{item.id === currentPlayerId}}">我</view>
+          <view class="avatar {{item.id === currentPlayerId ? 'active' : ''}}">{{item.avatar}}</view>
+          <view class="name">{{index + 1}} {{item.name}}</view>
+        </view>
+      </block>
+      <view class="seat invite-seat">
+        <button class="plus" open-type="share">＋</button>
+        <view class="name">邀请好友</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="tip-card">💡 点击 + 邀请好友加入圆桌，可设置人数限制或直接开始。</view>
+
+  <view class="tabbar">
+    <view class="tab active">🏠<text>首页</text></view>
+    <view class="tab">🎮<text>游戏库</text></view>
+    <view class="tab purple">🚪<text>房间</text></view>
+    <view class="tab">👤<text>我的</text></view>
+  </view>
+</view>

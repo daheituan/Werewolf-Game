@@ -1,0 +1,42 @@
+<view class="safe-area">
+  <view class="bg-confetti"></view>
+  <view class="page-header">
+    <view class="logo-wrap"><text class="hat">🎉</text><text class="logo">圆桌玩家</text></view>
+    <view class="header-actions"><text>•••</text><text>◉</text></view>
+  </view>
+
+  <view class="title-board">选择游戏类别</view>
+
+  <view class="hero-card purple" bindtap="goWerewolf">
+    <image class="hero-bg" src="/assets/werewolf-ref.png" mode="aspectFill"></image>
+    <view class="hero-mask"></view>
+    <view class="hero-content">
+      <view class="hero-title">狼人杀类</view>
+      <view class="hero-desc">经典推理，谁是隐藏的狼人？</view>
+      <view><text class="chip dark">派对推理</text><text class="chip dark">逻辑博弈</text><text class="chip dark">角色扮演</text></view>
+    </view>
+    <view class="hero-arrow">›</view>
+  </view>
+
+  <view class="hero-card orange" bindtap="goGuess">
+    <image class="hero-bg" src="/assets/guess-ref.png" mode="aspectFill"></image>
+    <view class="hero-mask warm"></view>
+    <view class="hero-content">
+      <view class="hero-title">猜词类游戏</view>
+      <view class="hero-desc">画画、猜歌、猜词，欢乐不停歇！</view>
+      <view><text class="chip light">你画我猜</text><text class="chip light">猜歌名</text><text class="chip light">猜词语</text></view>
+    </view>
+    <view class="hero-arrow">›</view>
+  </view>
+
+  <view class="hero-card light" bindtap="goMore">
+    <view class="gift">🎁</view>
+    <view class="hero-content">
+      <view class="hero-title brown">更多游戏</view>
+      <view class="hero-desc brown2">Game 8 · Coming Soon</view>
+    </view>
+    <view class="hero-arrow brown">›</view>
+  </view>
+
+  <bottom-nav current="library"></bottom-nav>
+</view>

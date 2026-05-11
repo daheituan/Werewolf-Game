@@ -1,0 +1,25 @@
+<view class="safe-area">
+  <view class="bg-confetti"></view>
+  <view class="page-header">
+    <view class="logo-wrap"><text class="hat">🎉</text><text class="logo">圆桌玩家</text></view>
+    <view class="header-actions"><text>•••</text><text>◉</text></view>
+  </view>
+
+  <view class="profile-card cream-card">
+    <view class="profile-top">
+      <view class="avatar-big">🦊</view>
+      <view>
+        <view class="name">圆桌玩家</view>
+        <view class="muted">聚会小游戏辅助官</view>
+      </view>
+    </view>
+    <view class="menu-list">
+      <view class="menu-item"><text>我的房间</text><text>›</text></view>
+      <view class="menu-item"><text>最近游戏</text><text>›</text></view>
+      <view class="menu-item"><text>题库管理</text><text>›</text></view>
+      <view class="menu-item"><text>新增游戏入口</text><text>›</text></view>
+    </view>
+  </view>
+
+  <bottom-nav current="profile"></bottom-nav>
+</view>

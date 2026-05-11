@@ -1,0 +1,43 @@
+<view class="safe-area home-page">
+  <view class="bg-confetti"></view>
+
+  <view class="page-header">
+    <view class="logo-wrap"><text class="hat">🎉</text><text class="logo">圆桌玩家</text></view>
+    <view class="header-actions"><text>•••</text><text>◉</text></view>
+  </view>
+
+  <view class="room-bar glass-card">
+    <view class="left row">
+      <view class="wolf-icon">🐺</view>
+      <view>
+        <view class="room-name">欢乐狼人局 <text class="lock">🔒</text></view>
+        <view class="room-no">房间号：{{room.roomNo}}</view>
+      </view>
+    </view>
+    <view class="joined">已加入 <text>{{room.players.length}}</text>/{{room.maxPlayers}}</view>
+  </view>
+
+  <view class="table-stage">
+    <view class="round-table">
+      <view class="table-inner"></view>
+      <button class="start-game" bindtap="goCategory">开始游戏</button>
+      <view class="table-desc">联机房间 · 所有人准备后由房主开局</view>
+
+      <block wx:for="{{seats}}" wx:key="id">
+        <view class="seat seat-{{index}}">
+          <view class="me-tag" wx:if="{{item.id===currentPlayerId}}">我</view>
+          <view class="avatar-wrap {{item.id===currentPlayerId ? 'active' : ''}}">
+            <view class="avatar-face">{{item.avatar}}</view>
+          </view>
+          <view class="seat-name">{{index+1}} {{item.name}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <button class="invite-btn glass-card" open-type="share">＋ 邀请好友</button>
+
+  <view class="float-tip">💡 联机模式：每位玩家在自己的设备查看身份；只有游戏结束后才公开全员身份。</view>
+
+  <bottom-nav current="home"></bottom-nav>
+</view>

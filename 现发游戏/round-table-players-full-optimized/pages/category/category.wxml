@@ -1,0 +1,18 @@
+<view class="safe bg-dots">
+  <view class="header"><button class="back" bindtap="back">‹</button><text class="title">界面 2/10 · 选择游戏类别</text><view class="mock-menu">••• ◉</view></view>
+  <view class="room-strip row space-between">
+    <view class="row"><view class="game-icon">🐺</view><view><view class="room-title">{{room.name}} 🔒</view><view class="muted">房间号：{{room.roomNo}}</view><view class="badge">标准模式 · {{room.players.length}}/{{room.maxPlayers}}</view></view></view>
+    <view class="avatars"><block wx:for="{{room.players}}" wx:key="id"><view class="avatar small">{{item.avatar}}</view></block></view>
+  </view>
+  <view class="cat-list">
+    <block wx:for="{{categories}}" wx:key="id">
+      <view class="cat-card {{item.id}}" bindtap="selectCategory" data-id="{{item.id}}">
+        <view class="cat-icon">{{item.icon}}</view>
+        <view class="cat-main"><view class="cat-title">{{item.name}}</view><view class="cat-desc">{{item.desc}}</view><view><block wx:for="{{item.tags}}" wx:key="*this"><text class="chip mini">{{item}}</text></block></view></view>
+        <text class="arrow">›</text>
+      </view>
+    </block>
+    <view class="create-entry">＋ 新增游戏入口 <text>创建新玩法，和朋友一起玩</text></view>
+  </view>
+  <button class="btn-primary" bindtap="next">下一步</button>
+</view>

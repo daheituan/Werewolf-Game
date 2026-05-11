@@ -1,0 +1,37 @@
+
+<view class="safe-area">
+  <view class="bg-confetti"></view>
+  <view class="page-header">
+    <button class="back-btn" bindtap="back">‹</button>
+    <text class="page-title">界面 10/10 · 投票与发言</text>
+    <view class="header-actions"><text>•••</text><text>◉</text></view>
+  </view>
+
+  <view class="cream-card vote-panel">
+    <view class="vote-head">
+      <view>
+        <view class="big">开始发言与投票</view>
+        <view class="muted">第 {{round}} 轮 · 讨论阶段</view>
+      </view>
+      <view class="timer"><text>25</text>s</view>
+    </view>
+
+    <view class="vote-grid">
+      <block wx:for="{{players}}" wx:key="id">
+        <view class="vote-item {{selected===item.id?'selected':''}}" bindtap="select" data-id="{{item.id}}">
+          <view class="avatar-dot">{{item.avatar}}</view>
+          <view class="player-name">{{index+1}} {{item.name}}</view>
+          <text class="vote-count">{{votes[index]}}票</text>
+          <text class="status" wx:if="{{index===2}}">已报警</text>
+          <text class="out" wx:if="{{index===5 || index===7}}">本轮出局</text>
+        </view>
+      </block>
+    </view>
+
+    <view class="button-row">
+      <button class="secondary-btn" bindtap="abstain">弃票</button>
+      <button class="primary-btn flex" bindtap="confirm">确认投票</button>
+      <button class="record-btn">发言记录</button>
+    </view>
+  </view>
+</view>

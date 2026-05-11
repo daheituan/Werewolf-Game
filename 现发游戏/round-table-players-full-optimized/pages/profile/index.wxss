@@ -1,0 +1,6 @@
+.profile-card { padding: 28rpx; }
+.profile-top { display:flex; align-items:center; margin-bottom: 22rpx; }
+.avatar-big { width: 120rpx; height: 120rpx; border-radius: 50%; background: linear-gradient(180deg,#ffe8bc,#ffd071); display:flex; align-items:center; justify-content:center; font-size: 58rpx; margin-right: 20rpx; }
+.name { font-size: 36rpx; font-weight: 900; }
+.menu-item { height: 96rpx; border-bottom: 2rpx dashed #e8d0ad; display:flex; align-items:center; justify-content:space-between; font-size: 30rpx; font-weight: 800; color:#62391b; }
+.menu-item:last-child { border-bottom: 0; }

@@ -1,0 +1,41 @@
+
+<view class="safe-area">
+  <view class="bg-confetti"></view>
+  <view class="page-header">
+    <button class="back-btn" bindtap="back">‹</button>
+    <text class="page-title">界面 7/10 · 游戏规则</text>
+    <view class="header-actions"><text>•••</text><text>◉</text></view>
+  </view>
+
+  <view class="game-head glass-card">
+    <view class="game-avatar">{{game.icon}}</view>
+    <view>
+      <view class="game-name">{{game.name}}</view>
+      <view><text class="badge">标准模式</text><text class="people-badge">{{settings.totalPlayers}}人局</text></view>
+    </view>
+  </view>
+
+  <view class="cream-card rules-card">
+    <view class="wood-title">⭐ 游戏规则 ⭐</view>
+    <block wx:for="{{ruleList}}" wx:key="index">
+      <view class="rule-row">
+        <text class="num-badge">{{index+1}}</text>
+        <view class="rule-icon">{{icons[index] || '🎲'}}</view>
+        <text class="rule-text">{{item}}</text>
+      </view>
+    </block>
+
+    <view class="sample-title">随机任务 / 动作示例</view>
+    <view class="sample-grid">
+      <block wx:for="{{samples}}" wx:key="*this">
+        <view class="sample-card"><text>🐑</text><view>{{item}}</view></view>
+      </block>
+    </view>
+
+    <view class="flow">
+      <text class="flow-on">① 规则</text><text>→</text><text>② 联机身份下发</text><text>→</text><text>③ 游戏开始</text>
+    </view>
+
+    <button class="primary-btn continue-btn" bindtap="goRole">我知道了，继续</button>
+  </view>
+</view>

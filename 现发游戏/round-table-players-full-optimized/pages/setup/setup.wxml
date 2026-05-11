@@ -1,0 +1,92 @@
+
+<view class="safe-area">
+  <view class="bg-confetti"></view>
+  <view class="page-header">
+    <button class="back-btn" bindtap="back">‹</button>
+    <text class="page-title">{{pageTitle}}</text>
+    <view class="header-actions"><text>•••</text><text>◉</text></view>
+  </view>
+
+  <view class="game-hero glass-card">
+    <view class="game-icon">{{game.icon}}</view>
+    <view class="hero-text">
+      <view class="hero-name">{{game.name}} <text class="badge">标准模式</text></view>
+      <view class="hero-desc">{{game.desc}}</view>
+      <view class="online-tip">联机模式：身份 / 题目只发送到对应玩家设备</view>
+    </view>
+  </view>
+
+  <view class="cream-card setup-panel" wx:if="{{!isGuess}}">
+    <view class="setting-row">
+      <view class="setting-label"><text class="setting-icon">👥</text>总人数</view>
+      <view class="stepper"><button bindtap="dec" data-key="totalPlayers">－</button><text>{{settings.totalPlayers}}</text><button bindtap="inc" data-key="totalPlayers">＋</button></view>
+    </view>
+    <view class="setting-row">
+      <view class="setting-label"><text class="setting-icon">🐺</text>卧底 / 狼人数量</view>
+      <view class="auto-value"><text>{{settings.undercoverCount}}</text><text class="mini-badge">自动生成</text></view>
+    </view>
+    <view class="hint-line">不超过总人数 1/3，系统会根据人数自动约束。</view>
+    <view class="setting-row">
+      <view class="setting-label"><text class="setting-icon">⏳</text>游戏轮次</view>
+      <view class="stepper"><button bindtap="dec" data-key="rounds">－</button><text>{{settings.rounds}}</text><button bindtap="inc" data-key="rounds">＋</button></view>
+    </view>
+    <view class="setting-row">
+      <view class="setting-label"><text class="setting-icon">📖</text>情境 / 任务题库</view>
+      <button class="small-orange" bindtap="changeScenario">🎲 随机生成</button>
+    </view>
+    <view class="setting-row">
+      <view class="setting-label"><text class="setting-icon">🎵</text>歌曲重复</view>
+      <view class="select-pill">不可重复 ⌄</view>
+    </view>
+    <view class="setting-row">
+      <view class="setting-label"><text class="setting-icon">🎤</text>演唱规则</view>
+      <view class="select-pill">每人每轮 1~2 句</view>
+    </view>
+
+    <view class="preview-box">
+      <view class="preview-head">情境预览 <button bindtap="changeScenario">换一组</button></view>
+      <view class="scenario-row"><text class="good">好人情境</text><view>{{scenario.good}}</view></view>
+      <view class="scenario-row"><text class="bad">卧底情境</text><view>{{scenario.bad}}</view></view>
+      <view class="divider"></view>
+      <view class="task-list">
+        <block wx:for="{{tasks}}" wx:key="*this"><text class="chip">{{item}}</text></block>
+      </view>
+    </view>
+
+    <view class="notice">💡 开局先展示规则，再由系统把身份发到每个玩家自己的设备。</view>
+    <view class="button-row"><button class="secondary-btn" bindtap="goRules">查看规则</button><button class="primary-btn flex" bindtap="goRules">开始分配</button></view>
+  </view>
+
+  <view class="cream-card setup-panel" wx:else>
+    <view class="setting-row">
+      <view class="setting-label"><text class="setting-icon">👥</text>队伍数量</view>
+      <view class="select-pill">2 队 ⌄</view>
+    </view>
+    <view class="setting-row">
+      <view class="setting-label"><text class="setting-icon">👫</text>自动分组</view>
+      <view><text class="team red">红队 3 人</text><text class="team blue">蓝队 3 人</text></view>
+    </view>
+    <view class="setting-row type-row">
+      <view class="setting-label"><text class="setting-icon">❔</text>题板类型</view>
+      <view><text class="chip active">成语</text><text class="chip">词语</text><text class="chip">歌名</text><text class="chip">歌词</text></view>
+    </view>
+    <view class="setting-row">
+      <view class="setting-label"><text class="setting-icon">⏱</text>答题时长</view>
+      <view class="select-pill">{{settings.answerSeconds}} 秒 ⌄</view>
+    </view>
+    <view class="setting-row">
+      <view class="setting-label"><text class="setting-icon">🖌</text>轮流作画</view>
+      <switch checked color="#ffac27" />
+    </view>
+    <view class="setting-row">
+      <view class="setting-label"><text class="setting-icon">🎲</text>随机题库</view>
+      <button class="small-orange" bindtap="refreshRandom">随机更换</button>
+    </view>
+    <view class="preview-box">
+      <view class="preview-head">题板内容预览（仅示例）</view>
+      <block wx:for="{{questions}}" wx:key="*this"><text class="chip">{{item}}</text></block>
+    </view>
+    <view class="notice">🔒 猜题成员不可见题目，其他成员可见，适合联机分屏游玩。</view>
+    <view class="button-row"><button class="secondary-btn">重新分组</button><button class="primary-btn flex" bindtap="goRules">开始游戏</button></view>
+  </view>
+</view>

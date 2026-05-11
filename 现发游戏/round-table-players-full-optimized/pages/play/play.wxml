@@ -1,0 +1,60 @@
+
+<view class="safe-area">
+  <view class="bg-confetti"></view>
+  <view class="page-header">
+    <button class="back-btn" bindtap="back">‹</button>
+    <text class="page-title">界面 9/10 · 游戏进行中</text>
+    <view class="header-actions"><text>•••</text><text>◉</text></view>
+  </view>
+
+  <view class="play-room glass-card">
+    <view>
+      <view class="room-title">{{game.name}}</view>
+      <view class="round-line">第 {{round}} 轮 / 共 {{settings.rounds}} 轮</view>
+    </view>
+    <view class="joined">👥 {{players.length}}/{{room.maxPlayers}}</view>
+  </view>
+
+  <view class="cream-card play-card">
+    <view class="label">你的秘密情境</view>
+    <view class="scenario-big">{{myRole.prompt}}</view>
+    <view class="muted center">请根据情境选择或演唱一两句歌曲，帮助大家推理。</view>
+
+    <view class="recommend-title">🎵 为你推荐的歌曲</view>
+    <view class="songs">
+      <block wx:for="{{songs}}" wx:key="name">
+        <view class="song-chip">
+          <text class="song-name">{{item.name}}</text>
+          <text class="singer">{{item.singer}}</text>
+        </view>
+      </block>
+    </view>
+
+    <view class="assist-grid">
+      <button bindtap="shuffle">🔀 随机换一组</button>
+      <button>☰ 仅显示歌名</button>
+      <button>▶ 播放副歌</button>
+      <button>▣ 查看歌词提示</button>
+    </view>
+
+    <view class="lyric-box">
+      <view class="lyric-title">歌词提示（仅供参考）</view>
+      <view class="lyric-text">{{lyricHint}}</view>
+      <view class="lyric-note">仅展示极短片段，辅助生成灵感；演唱 1~2 句即可。</view>
+    </view>
+  </view>
+
+  <view class="player-progress glass-card">
+    <block wx:for="{{players}}" wx:key="id">
+      <view class="progress-item {{item.id===currentPlayerId?'active':''}}">
+        <view class="avatar-dot">{{item.avatar}}</view>
+        <text>{{index+1}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="button-row">
+    <button class="secondary-btn" bindtap="goVote">进入投票</button>
+    <button class="primary-btn flex" bindtap="endGame">结束并公开身份</button>
+  </view>
+</view>

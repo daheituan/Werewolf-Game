@@ -1,0 +1,41 @@
+{
+  "description": "圆桌玩家 - 微信小游戏完整优化版",
+  "compileType": "game",
+  "libVersion": "3.6.7",
+  "appid": "wxc866a2fc983940a7",
+  "projectname": "round-table-players-wechat-game-complete",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "minified": true,
+    "enhance": true,
+    "postcss": true,
+    "compileHotReLoad": false,
+    "compileWorklet": false,
+    "uglifyFileName": false,
+    "uploadWithSourceMap": true,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "minifyWXML": true,
+    "localPlugins": false,
+    "disableUseStrict": false,
+    "useCompilerPlugins": false,
+    "condition": false,
+    "swc": false,
+    "disableSWC": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    }
+  },
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "condition": {},
+  "simulatorPluginLibVersion": {},
+  "isGameTourist": false,
+  "editorSetting": {}
+}

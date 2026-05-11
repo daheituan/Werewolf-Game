@@ -1,0 +1,45 @@
+
+<view class="safe-area role-page">
+  <view class="bg-confetti"></view>
+  <view class="page-header">
+    <button class="back-btn" bindtap="back">‹</button>
+    <text class="page-title">界面 8/10 · 联机身份查看</text>
+    <view class="header-actions"><text>•••</text><text>◉</text></view>
+  </view>
+
+  <view class="turn-bar glass-card">
+    <view class="turn-title">当前设备玩家：<text>{{me.name}}</text></view>
+    <view class="avatar-row">
+      <block wx:for="{{players}}" wx:key="id">
+        <view class="mini-player {{item.id===currentPlayerId?'current':''}}">
+          <view class="avatar-dot">{{item.avatar}}</view><text>{{index+1}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view class="secret-card">
+    <view class="ribbon">🎵 {{game.name}} 🎵</view>
+    <view class="privacy-tag">当前：仅自己设备可见</view>
+    <view class="role-line">你的身份：<text class="{{myRole.camp}}">{{myRole.role}}</text></view>
+
+    <view class="prompt-card" wx:if="{{revealed}}">
+      <view class="prompt-text">{{myRole.prompt}}</view>
+      <view class="prompt-note">请记住情境，游戏结束前不要让其他玩家看到。</view>
+    </view>
+    <view class="prompt-card hidden" wx:else bindtap="toggleReveal">
+      <view class="eye">🙈</view>
+      <view class="prompt-text">点击查看你的身份与情境</view>
+      <view class="prompt-note">系统只会在当前登录玩家设备显示。</view>
+    </view>
+
+    <view class="seal">🔒</view>
+  </view>
+
+  <view class="privacy-note">🛡 其他玩家需要在自己的设备查看身份；不会出现“递手机给下一位玩家”的流程。</view>
+
+  <view class="button-row">
+    <button class="secondary-btn" bindtap="toggleReveal">{{revealed?'隐藏内容':'查看身份'}}</button>
+    <button class="primary-btn flex" bindtap="enterPlay">进入游戏</button>
+  </view>
+</view>

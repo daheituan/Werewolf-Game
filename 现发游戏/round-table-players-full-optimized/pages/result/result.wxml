@@ -1,0 +1,40 @@
+
+<view class="safe-area result-page">
+  <view class="bg-confetti"></view>
+  <view class="page-header">
+    <button class="back-btn" bindtap="home">⌂</button>
+    <text class="page-title">界面 10/10 · 结果与身份公开</text>
+    <view class="header-actions"><text>•••</text><text>◉</text></view>
+  </view>
+
+  <view class="cream-card result-card">
+    <view class="banner">🎉 本局结果 🎉</view>
+    <view class="winner">好人阵营获胜 🏆</view>
+    <view class="sub">游戏结束后，以下身份才对所有玩家公开。</view>
+
+    <view class="stats">
+      <view><text>{{stats.rounds}}</text><label>游戏轮数</label></view>
+      <view><text>{{stats.wolves}}</text><label>放逐狼人数</label></view>
+      <view><text>{{stats.correct}}</text><label>正确推理</label></view>
+      <view><text>{{stats.survivors}}</text><label>存活好人</label></view>
+      <view><text>{{stats.duration}}</text><label>本局时长</label></view>
+    </view>
+
+    <view class="identity-title">🔓 全员身份公开</view>
+    <view class="identity-list">
+      <block wx:for="{{players}}" wx:key="id">
+        <view class="identity-row">
+          <view class="person"><view class="avatar-dot">{{item.avatar}}</view><text>{{index+1}} {{item.name}}</text></view>
+          <view class="role {{roles[item.id].camp}}">{{roles[item.id].role}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view class="result-buttons">
+    <button class="primary-btn small" bindtap="again">再来一局</button>
+    <button class="purple-btn" bindtap="again">返回游戏库</button>
+    <button class="green-btn" open-type="share">分享房间</button>
+  </view>
+  <button class="home-btn" bindtap="home">⌂ 返回首页</button>
+</view>

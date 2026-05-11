@@ -1,0 +1,30 @@
+<view class="safe-area">
+  <view class="bg-confetti"></view>
+  <view class="page-header">
+    <view class="logo-wrap"><text class="hat">🎉</text><text class="logo">圆桌玩家</text></view>
+    <view class="header-actions"><text>•••</text><text>◉</text></view>
+  </view>
+
+  <view class="room-main glass-card">
+    <view class="room-top">
+      <view>
+        <view class="big-title">{{room.name}}</view>
+        <view class="muted">房间号：{{room.roomNo}}</view>
+      </view>
+      <button class="copy-btn" bindtap="copyRoomNo">复制房号</button>
+    </view>
+    <view class="count-line">当前 {{players.length}} / {{room.maxPlayers}} 人</view>
+    <view class="player-grid">
+      <block wx:for="{{players}}" wx:key="id">
+        <view class="player-item">
+          <view class="avatar">{{item.avatar}}</view>
+          <view class="player-name">{{item.name}}</view>
+        </view>
+      </block>
+    </view>
+    <button class="primary-btn start-mini" bindtap="goStart">开始游戏</button>
+  </view>
+
+  <view class="float-tip">房主可在此管理房间、查看在线玩家，并从这里继续开局。</view>
+  <bottom-nav current="room"></bottom-nav>
+</view>

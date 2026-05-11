@@ -1,0 +1,8 @@
+<view class="bottom-nav">
+  <block wx:for="{{tabs}}" wx:key="key">
+    <view class="nav-item {{current===item.key?'active':''}} {{item.key==='room'?'room':''}}" bindtap="switchTab" data-url="{{item.url}}">
+      <view class="icon">{{item.icon}}</view>
+      <text>{{item.text}}</text>
+    </view>
+  </block>
+</view>

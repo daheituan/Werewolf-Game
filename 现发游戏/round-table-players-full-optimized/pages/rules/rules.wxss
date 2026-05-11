@@ -1,0 +1,15 @@
+
+.game-head{display:flex;align-items:center;justify-content:center;gap:20rpx;color:#fff;margin-bottom:22rpx;padding:18rpx}
+.game-avatar{width:96rpx;height:96rpx;border-radius:50%;background:#fff4db;border:5rpx solid #fff;display:flex;align-items:center;justify-content:center;font-size:50rpx}
+.game-name{font-size:40rpx;font-weight:900;color:#fff6dc}.people-badge{margin-left:10rpx;padding:8rpx 18rpx;border-radius:999rpx;background:rgba(255,255,255,.16);color:#fff;font-size:22rpx;font-weight:800}
+.rules-card{padding:26rpx}
+.wood-title{height:86rpx;border-radius:24rpx;background:linear-gradient(#a86b39,#7c4925);color:#fff6dd;font-size:38rpx;font-weight:900;display:flex;align-items:center;justify-content:center;margin-bottom:20rpx;box-shadow:inset 0 5rpx 0 rgba(255,255,255,.16),0 8rpx 16rpx rgba(0,0,0,.18)}
+.rule-row{display:flex;align-items:center;background:#fff9ec;border-radius:24rpx;padding:16rpx;margin-bottom:14rpx;box-shadow:inset 0 0 0 2rpx rgba(239,209,171,.45)}
+.num-badge{width:48rpx;height:48rpx;border-radius:50%;background:linear-gradient(#ffd45a,#f8a92d);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;margin-right:14rpx;box-shadow:0 4rpx 0 #d9851e}
+.rule-icon{width:64rpx;height:64rpx;border-radius:18rpx;background:#fff;display:flex;align-items:center;justify-content:center;font-size:34rpx;margin-right:14rpx}
+.rule-text{flex:1;font-size:27rpx;line-height:1.45;color:#4d2d17;font-weight:700}
+.sample-title{display:inline-flex;margin:18rpx auto 16rpx;padding:12rpx 26rpx;border-radius:22rpx;background:#9b6840;color:#fff6dd;font-size:28rpx;font-weight:900}
+.sample-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14rpx}
+.sample-card{background:#fff8ec;border-radius:22rpx;padding:16rpx 8rpx;text-align:center;font-weight:800;color:#66391a;font-size:22rpx}.sample-card text{display:block;font-size:40rpx;margin-bottom:8rpx}
+.flow{margin:24rpx 0;display:flex;align-items:center;justify-content:center;gap:10rpx;color:#98806a;font-size:23rpx;flex-wrap:wrap}.flow-on{background:#ffc241;color:#6b2f0f;border-radius:22rpx;padding:8rpx 16rpx;font-weight:900}
+.continue-btn{margin-top:6rpx}
